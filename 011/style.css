@@ -1,0 +1,864 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #203a31;
+    background-color: #f5f9f6;
+}
+
+header {
+    background-color: #284b3f;
+    padding: 15px 20px 25px;
+    color: white;
+}
+
+.site-name {
+    margin: 0 0 18px;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    color: #b9ddc8;
+}
+
+nav a.active {
+    color: #d6f1de;
+}
+
+nav .login-nav {
+    display: inline-block;
+    background-color: #e6f2e9;
+    color: #284b3f;
+    padding: 5px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav .login-nav:hover {
+    background-color: #cde4d5;
+    color: #284b3f;
+}
+
+.auth-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-name {
+    color: #e6f2e9;
+    font-size: 14px;
+}
+
+.logout-button {
+    background: #e6f2e9;
+    color: #284b3f;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #cde4d5;
+}
+
+main {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 35px 15px 40px;
+    flex: 1;
+}
+
+main h1 {
+    font-size: 38px;
+    color: #203a31;
+    margin: 0 0 28px;
+    line-height: 1.4;
+}
+
+main > p {
+    margin: 0 0 20px;
+}
+
+
+.card {
+    background-color: white;
+    border: 1px solid #d3e3d8;
+    border-radius: 15px;
+    padding: 28px 20px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 27px;
+    color: #203a31;
+    margin: 12px 0 25px;
+}
+
+.card p {
+    margin: 0 0 10px;
+}
+
+.card ul,
+.card ol {
+    padding-left: 38px;
+    margin: 10px 0;
+}
+
+.card li {
+    padding-left: 3px;
+    margin-bottom: 3px;
+}
+
+/* ===========================
+   ปุ่มทั่วไป
+=========================== */
+
+.button {
+    display: inline-block;
+    background-color: #284b3f;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: #376854;
+    color: white;
+}
+
+
+footer {
+    background-color: #284b3f;
+    color: white;
+    padding: 25px 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.login-main {
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 35px 20px 60px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 370px;
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.07);
+}
+
+.login-container h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 5px 0 25px;
+    color: #294b40;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+/* ช่องกรอกข้อมูล */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #284b3f;
+    box-shadow: 0 0 4px rgba(40, 75, 63, 0.2);
+}
+
+
+.password-box {
+    display: flex;
+    gap: 7px;
+}
+
+.password-box input {
+    flex: 1;
+    min-width: 0;
+}
+
+#togglePassword {
+    background-color: #284b3f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#togglePassword:hover {
+    background-color: #376854;
+}
+
+
+.login-button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #284b3f;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #376854;
+}
+
+
+#loginMessage {
+    text-align: center;
+    font-size: 13px;
+    min-height: 20px;
+    margin: 10px 0;
+}
+
+#loginMessage.success {
+    color: green;
+}
+
+#loginMessage.error {
+    color: #c62828;
+}
+
+
+.demo-account {
+    background-color: #f1f7f3;
+    margin-top: 18px;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.demo-account h3 {
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.demo-account p {
+    font-size: 13px;
+    margin: 8px 0;
+    color: #435a50;
+}
+
+.demo-account b {
+    color: #294b40;
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .site-name {
+        font-size: 21px;
+    }
+
+    nav ul {
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 25px 15px 35px;
+    }
+
+    main h1 {
+        font-size: 29px;
+    }
+
+    .card {
+        padding: 20px 17px;
+    }
+
+    .card h2 {
+        font-size: 23px;
+    }
+
+    .button {
+        font-size: 15px;
+    }
+
+    .login-main {
+        padding: 25px 15px 45px;
+    }
+
+    .login-container {
+        padding: 25px 20px;
+    }
+
+    .login-container h1 {
+        font-size: 25px;
+    }
+
+    footer {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================
+   ตกแต่งหน้าข้อมูลการเดินทาง
+===================================== */
+
+/* ข้อความแนะนำ */
+.travel-intro {
+    color: #536a5e;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+/* กล่องสถานที่ท่องเที่ยว */
+.travel-card {
+    background: #ffffff;
+    border: 1px solid #d3e3d8;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+/* หัวข้อสถานที่ */
+.travel-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e2ece5;
+}
+
+/* หมายเลขสถานที่ */
+.travel-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: #284b3f;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.travel-heading h2 {
+    color: #284b3f;
+    font-size: 26px;
+    margin: 0;
+}
+
+.travel-heading p {
+    color: #819188;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+/* เนื้อหา */
+.travel-description {
+    font-size: 16px;
+    line-height: 2;
+    color: #40574b;
+}
+
+.travel-card h3 {
+    font-size: 21px;
+    color: #284b3f;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.travel-card > p {
+    line-height: 1.9;
+}
+
+/* ตารางข้อมูลสำคัญ */
+.travel-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-item {
+    background-color: #f5f9f6;
+    border: 1px solid #e1ebe4;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.info-item strong {
+    display: block;
+    color: #284b3f;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    color: #536a5e;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* จุดเด่นของสถานที่ */
+.highlight-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.highlight-item {
+    background-color: #f7faf8;
+    border-left: 4px solid #376854;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.highlight-item h4 {
+    font-size: 17px;
+    color: #284b3f;
+    margin: 0 0 10px;
+}
+
+.highlight-item p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #536a5e;
+    margin: 0;
+}
+
+/* ประวัติแบบ Timeline */
+.history-timeline {
+    border-left: 3px solid #376854;
+    margin-left: 10px;
+    padding-left: 25px;
+}
+
+.history-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.history-item::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: #376854;
+    border: 3px solid white;
+    border-radius: 50%;
+    left: -34px;
+    top: 5px;
+}
+
+.history-date {
+    display: inline-block;
+    background-color: #e6f2e9;
+    color: #284b3f;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.history-item p {
+    font-size: 15px;
+    color: #536a5e;
+    line-height: 1.9;
+    margin-top: 10px;
+}
+
+/* ปุ่มเปิดแผนที่ */
+.travel-map {
+    margin-top: 25px;
+}
+
+/* กล่องคำแนะนำ */
+.travel-tips {
+    background-color: #edf6ef;
+}
+
+.travel-tips h2 {
+    color: #284b3f;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.travel-tips li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+
+    .travel-card {
+        padding: 20px;
+    }
+
+    .travel-heading {
+        align-items: flex-start;
+    }
+
+    .travel-heading h2 {
+        font-size: 21px;
+    }
+
+    .travel-number {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .travel-info {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-list {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-card h3 {
+        font-size: 19px;
+    }
+
+    .travel-description {
+        font-size: 15px;
+    }
+
+    .history-timeline {
+        padding-left: 20px;
+    }
+
+    .history-item::before {
+        left: -29px;
+    }
+}
+
+
+/* ==============================
+   ระบบสไลด์รูปภาพหน้าแรก
+============================== */
+
+/* ส่วนสไลด์ */
+.tourism-slider {
+    width: 100%;
+    max-width: 850px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+/* หัวข้อสไลด์ */
+.tourism-slider h2 {
+    font-size: 24px;
+    color: #284b3f;
+    margin-bottom: 20px;
+}
+
+/* กรอบรูปภาพ */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #e6eee9;
+}
+
+/* ซ่อนรูปที่ไม่ได้แสดง */
+.mySlides {
+    display: none;
+}
+
+/* รูปภาพ */
+.mySlides img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+/* เอฟเฟกต์เปลี่ยนรูป */
+.fade {
+    animation: fadeEffect 0.8s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* จุดวงกลมด้านล่าง */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/* จุดแต่ละจุด */
+.dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #bdc9c2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* จุดของรูปที่กำลังแสดง */
+.dot.active {
+    width: 24px;
+    border-radius: 10px;
+    background-color: #284b3f;
+}
+
+/* เมื่อนำเมาส์ไปชี้ */
+.dot:hover {
+    background-color: #376854;
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+
+    .tourism-slider {
+        margin: 25px auto;
+    }
+
+    .tourism-slider h2 {
+        font-size: 19px;
+    }
+
+    .mySlides img {
+        height: 220px;
+    }
+
+}
+
+
+/* ==============================
+   ปรับขนาดรูปหน้าวางแผนเที่ยว
+============================== */
+
+.plan-photo-card {
+    max-width: 850px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #d3e3d8;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* กล่องจัดรูปภาพให้อยู่ตรงกลาง */
+.plan-image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 0;
+}
+
+/* ปรับขนาดรูปให้พอดี */
+.plan-photo-card .plan-image-box img {
+    width: 100%;
+    max-width: 650px;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* เนื้อหาด้านล่างรูป */
+.plan-content {
+    padding: 25px;
+}
+
+/* รองรับหน้าจอโทรศัพท์ */
+@media (max-width: 600px) {
+
+    .plan-photo-card {
+        width: 100%;
+    }
+
+    .plan-image-box {
+        padding: 12px 12px 0;
+    }
+
+    .plan-photo-card .plan-image-box img {
+        height: 180px;
+    }
+
+    .plan-content {
+        padding: 18px;
+    }
+}
+
+
+/* รูปแผนที่หน้าข้อมูลการเดินทาง */
+
+.travel-map-card {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #d3e3d8;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.travel-map-card h2 {
+    color: #284b3f;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.travel-map-card p {
+    color: #536a5e;
+    line-height: 1.9;
+}
+
+.travel-map-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.travel-map-card .travel-map-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.travel-map-card .image-credit {
+    font-size: 13px;
+    color: #7b8a80;
+}
+
+@media (max-width: 600px) {
+    .travel-map-card {
+        padding: 15px;
+    }
+
+    .travel-map-card .travel-map-image img {
+        max-width: 100%;
+    }
+}
+
+
+/* ปรับขนาดรูปแผนที่ในหน้า travel */
+
+.travel-map-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+}
+
+.travel-map-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 600px) {
+    .travel-map-image img {
+        max-width: 100%;
+    }
+}

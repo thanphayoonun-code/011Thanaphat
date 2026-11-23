@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>วางแผนเที่ยว | เที่ยวบ้านเรา</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <p class="site-name">เที่ยวบ้านเรา</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="places.html">ที่เที่ยว</a></li>
+            <li><a href="food.html">อาหาร</a></li>
+            <li><a href="plan.html">วางแผนเที่ยว</a></li>
+            <li><a href="travel.html">ข้อมูลการเดินทาง</a></li>
+            <li class="auth-menu"></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<main class="photo-page">
+
+    <h1>แผนเที่ยวหนึ่งวัน</h1>
+
+    <p class="page-intro">
+        วางแผนท่องเที่ยวจังหวัดประจวบคีรีขันธ์
+        ภายในหนึ่งวันอย่างสะดวกและคุ้มค่า
+    </p>
+
+    <section class="plan-photo-card">
+
+        <div class="plan-image-box">
+            <img src="images/เที่ยว5.jpg"
+                 alt="บรรยากาศริมทะเลยามเย็น">
+        </div>
+
+        <div class="plan-content">
+
+            <h2>ลำดับการท่องเที่ยว</h2>
+
+            <div class="plan-item">
+                <span class="plan-time">08.00 น.</span>
+                <div>
+                    <h3>ช่วงเช้า</h3>
+                    <p>
+                        เดินทางไปเขาช่องกระจก
+                        เพื่อชมทัศนียภาพของเมือง
+                        ประจวบคีรีขันธ์
+                    </p>
+                </div>
+            </div>
+
+            <div class="plan-item">
+                <span class="plan-time">10.30 น.</span>
+                <div>
+                    <h3>ช่วงสาย</h3>
+                    <p>
+                        เดินทางไปสักการะศาลหลักเมือง
+                        ประจวบคีรีขันธ์
+                    </p>
+                </div>
+            </div>
+
+            <div class="plan-item">
+                <span class="plan-time">12.00 น.</span>
+                <div>
+                    <h3>ช่วงกลางวัน</h3>
+                    <p>
+                        รับประทานอาหารพื้นถิ่น
+                        และเลือกซื้อของฝากจากชุมชน
+                    </p>
+                </div>
+            </div>
+
+            <div class="plan-item">
+                <span class="plan-time">16.30 น.</span>
+                <div>
+                    <h3>ช่วงเย็น</h3>
+                    <p>
+                        เดินทางไปชมวิวริมทะเล
+                        และพักผ่อนชมบรรยากาศยามเย็น
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <p class="plan-note">
+        หมายเหตุ: เวลาเป็นเพียงตัวอย่าง
+        สามารถปรับเปลี่ยนตามความเหมาะสม
+        และเวลาเปิดทำการของสถานที่
+    </p>
+
+    <a class="button" href="travel.html">
+        ดูข้อมูลการเดินทาง
+    </a>
+
+</main>
+
+</main>
+
+<footer>
+    <p>นายธนภัทร  อยู่หนุน  011 ใบงานฝึกปฏิบัติวิชาการสร้างเว็บไซต์ทางธุรกิจ</p>
+</footer>
+
+</body>
+</html>
